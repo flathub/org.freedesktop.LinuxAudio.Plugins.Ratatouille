@@ -1,9 +1,9 @@
 id: org.freedesktop.LinuxAudio.Plugins.Ratatouille
-branch: '23.08'
+branch: '24.08'
 build-extension: true
 runtime: org.freedesktop.LinuxAudio.BaseExtension
 runtime-version: stable
-sdk: org.freedesktop.Sdk//23.08
+sdk: org.freedesktop.Sdk//24.08
 build-options:
   prefix: /app/extensions/Plugins/Ratatouille
   prepend-pkg-config-path: /app/extensions/Plugins/Ratatouille/lib/pkgconfig
@@ -26,7 +26,6 @@ modules:
       - "install -Dm644 libxputty/LICENSE ${FLATPAK_DEST}/share/licenses/libxputty/LICENSE"
       - "install -Dm644 RTNeural/LICENSE ${FLATPAK_DEST}/share/licenses/RTNeural/LICENSE"
       - "install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.freedesktop.LinuxAudio.Plugins.Ratatouille.metainfo.xml"
-      - "appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}"
     sources:
       - type: git
         url: https://github.com/brummer10/Ratatouille.lv2
