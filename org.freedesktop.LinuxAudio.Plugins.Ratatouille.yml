@@ -29,11 +29,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/brummer10/Ratatouille.lv2
-        tag: v0.8
-        commit: 938fbb28521992a0ff0401e3fc26c31cbdf7b850
+        tag: v0.9.1
+        commit: 2ede13685e4659ad12b51d5145753319a7caa468
       - type: patch
         path: compiler-fixes.patch
-      - type: patch
-        path: arm-fixes.patch
       - type: file
         path: org.freedesktop.LinuxAudio.Plugins.Ratatouille.metainfo.xml
