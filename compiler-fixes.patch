@@ -1,6 +1,6 @@
 diff -Naur ratatouille.orig/NeuralAmpModelerCore/CMakeLists.txt ratatouille/NeuralAmpModelerCore/CMakeLists.txt
---- ratatouille.orig/NeuralAmpModelerCore/CMakeLists.txt	2024-08-30 14:45:29.391093230 +0200
-+++ ratatouille/NeuralAmpModelerCore/CMakeLists.txt	2024-08-30 14:46:42.086043962 +0200
+--- ratatouille.orig/NeuralAmpModelerCore/CMakeLists.txt	2024-09-17 13:29:14.945040146 +0200
++++ ratatouille/NeuralAmpModelerCore/CMakeLists.txt	2024-09-17 13:30:36.247797645 +0200
 @@ -12,8 +12,6 @@
  
  if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
@@ -11,13 +11,13 @@ diff -Naur ratatouille.orig/NeuralAmpModelerCore/CMakeLists.txt ratatouille/Neur
  	add_compile_definitions(NOMINMAX WIN32_LEAN_AND_MEAN)
  else()
 diff -Naur ratatouille.orig/Ratatouille/makefile ratatouille/Ratatouille/makefile
---- ratatouille.orig/Ratatouille/makefile	2024-08-30 14:45:28.062112423 +0200
-+++ ratatouille/Ratatouille/makefile	2024-08-30 14:46:58.389808860 +0200
-@@ -143,7 +143,7 @@
+--- ratatouille.orig/Ratatouille/makefile	2024-09-17 13:29:13.503062182 +0200
++++ ratatouille/Ratatouille/makefile	2024-09-17 13:31:34.441908287 +0200
+@@ -158,7 +158,7 @@
  
  	LDFLAGS += -fvisibility=hidden -shared -lm -fPIC -pthread -lpthread \
  	-Wl,-z,noexecstack -Wl,--no-undefined -Wl,--gc-sections  -Wl,--exclude-libs,ALL \
--	-lstdc++fs `$(PKGCONFIG) --cflags --libs sndfile`
+-	`$(PKGCONFIG) --cflags --libs sndfile`
 +	`$(PKGCONFIG) --cflags --libs sndfile lv2`
  
  	CXXFLAGS += -MMD -flto=auto -fPIC -DPIC -Ofast -Wall -funroll-loops $(SSE_CFLAGS) \

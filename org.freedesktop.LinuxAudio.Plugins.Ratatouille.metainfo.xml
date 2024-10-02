@@ -36,13 +36,21 @@
   <screenshots>
     <screenshot>
       <caption>Plugin GUI</caption>
-      <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.8/Ratatouille.png</image>
+      <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.9/Ratatouille.png</image>
     </screenshot>
   </screenshots>
   <url type="vcs-browser">https://github.com/brummer10/Ratatouille.lv2</url>
   <url type="bugtracker">https://github.com/brummer10/Ratatouille.lv2/issues</url>
   <url type="homepage">https://github.com/brummer10/Ratatouille.lv2</url>
   <releases>
+    <release version="0.9" date="2024-09-15">
+      <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9</url>
+      <description>
+        <p>
+          This release add separate Input control for each Model, makes the delay a delta delay, means it allow to delay the first or the second Model, as needed, and implement support for the 'ctrl' key to allow sample accurate settings for the delay to solve phasing issues between the Models.
+        </p>
+      </description>
+    </release>
     <release version="0.8" date="2024-08-05">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.8</url>
       <description>
