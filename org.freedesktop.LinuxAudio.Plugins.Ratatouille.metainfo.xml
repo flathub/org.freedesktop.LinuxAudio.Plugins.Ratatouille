@@ -11,32 +11,32 @@
   <extends>org.freedesktop.LinuxAudio.BaseExtension</extends>
   <description>
     <p>
-      Ratatouille is a LV2 Neural Model loader and mixer for Linux. It can
-      load two models, which can be *.nam files with the Neural Amp
-      Modeler module, or *.json or .aidax files with the RTNeural
-      module.
+      Ratatouille is an LV2 neural model loader and mixer for Linux.
+      It can load two models, which can be *.nam files with the Neural Amp Modeler module, or *.json or .aidax files with the RTNeural module.
     </p>
     <p>
-      You can also load just a single model file, in that case the "Blend" control will do nothing. When you've loaded a second model, the "Blend" control will blend between the two models and mix them to simulate your specific tone.
+      You can also load just a single model file, in that case the "Blend" control will do nothing.
+      When you've loaded a second model, the "Blend" control will blend between the two models and mix them to simulate your specific tone.
     </p>
     <p>
-      Ratatouille using parallel processing for the neural models, so, loading a second neural model wouldn't be remarkable on the dsp load.
+      Ratatouille uses parallel processing for the neural models, so, loading a second neural model wouldn't be remarkable on the dsp load.
     </p>
     <p>
-      The "Delay" control could add a small delay to the second model to overcome phasing issues, or to add some color/reverb to the sound.
+      The "Delay" control can add a small delay to the second model to overcome phasing issues, or to add some color/reverb to the sound.
     </p>
     <p>
-      To round up your sound you can load two Impulse Response Files and mix them to your needs. IR-files could be normalised on load, so that they didn't influence the loudness.
+      To round up your sound you can load two impulse response Files and mix them to your needs.
+      IR files can be normalised on load so that they didn't influence the loudness.
     </p>
     <p>
-      Ratatouille.lv2 supports resampling when needed to match the expected sample rate of the loaded models. Both models and the IR Files may have different expectations regarding the sample rate.
-      Neural network emulator for guitar amplifiers. LV2 plugin.
+      Ratatouille.lv2 supports resampling when needed to match the expected sample rate of the loaded models.
+      Both models and the IR Files may have different expectations regarding the sample rate.
     </p>
   </description>
   <screenshots>
     <screenshot>
       <caption>Plugin GUI</caption>
-      <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.9/Ratatouille.png</image>
+      <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.9.5/Ratatouille.png</image>
     </screenshot>
   </screenshots>
   <url type="vcs-browser">https://github.com/brummer10/Ratatouille.lv2</url>
@@ -45,15 +45,51 @@
   <releases>
     <release version="0.9.5" date="2024-12-30">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.5</url>
+      <description>
+        <p>
+          This release introduce a (optional) automatic phase correction for loaded models and, a (optional) buffered mode, which means that all heavy processing was lifted into a background thread.
+          That reduce the DSP load to nearly zero on modern CPU's, but introduce a one frame buffer latency.
+          The latency introduced will be reported to the host (DAW) so that it could be compensated by the host.
+        </p>
+        <p>
+          Also, new in this release is the included MOD UI.
+          That allow to use Ratatouille with it's GUI in MOD Desktop.
+        </p>
+        <p>
+          Beside that there are now "erase" buttons which allow to quickly remove a model or IR file from the processing.
+        </p>
+      </description>
+    </release>
+    <release version="0.9.4" date="2024-12-19">
+      <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.4</url>
+      <description>
+        <p>
+          This release introduces a normalization option for NAM models and fixes an issue with the normalization (a.k.a. loudness compensation) of IR Files.
+        </p>
+      </description>
     </release>
     <release version="0.9.2" date="2024-11-18">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.2</url>
+      <description>
+        <p>
+          This release fixes a possible crash in the included file browser, fixes following symlinks in the file browser and updates to the latest NAM core release 2.0.
+        </p>
+      </description>
+    </release>
+    <release version="0.9.1" date="2024-09-25">
+      <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.1</url>
+      <description>
+        <p>
+          This release fixes issues some people have with the optimisation flags not compatible with their CPU/system.
+          It also fix cross compilation from source and provides an ARM64 binary.
+        </p>
+      </description>
     </release>
     <release version="0.9" date="2024-09-15">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9</url>
       <description>
         <p>
-          This release add separate Input control for each Model, makes the delay a delta delay, means it allow to delay the first or the second Model, as needed, and implement support for the 'ctrl' key to allow sample accurate settings for the delay to solve phasing issues between the Models.
+          This release adds separate input controls for each model and makes the delay a delta delay, which means it allows to delay the first or the second model as needed, and implements support for the 'ctrl' key to allow sample accurate settings for the delay to solve phasing issues between the models.
         </p>
       </description>
     </release>
@@ -61,7 +97,9 @@
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.8</url>
       <description>
         <p>
-          Ratatouille allow to load up to two neural model files and mix there output. Those models could be *.nam files or *.json or .aidax files. So you could blend from clean to crunch for example, or, go wild and mix different amp models, or mix a amp with a pedal simulation.
+          Ratatouille allow to load up to two neural model files and mix there output.
+          Those models could be *.nam files or *.json or .aidax files.
+          So you could blend from clean to crunch for example, or, go wild and mix different amp models, or mix a amp with a pedal simulation.
         </p>
         <p>
           Ratatouille using parallel processing to process the second neural model and the second IR-File to reduce the dsp load.
@@ -70,10 +108,12 @@
           The "Delay" control could add a small delay to the second model to overcome phasing issues, or to add some color/reverb to the sound.
         </p>
         <p>
-          To round up the sound it allow to load up to two Impulse Response files and mix there output as well. You could try the wildest combinations, or, be conservative and load just your single preferred IR-File.
+          To round up the sound it allow to load up to two Impulse Response files and mix there output as well.
+          You could try the wildest combinations, or, be conservative and load just your single preferred IR-File.
         </p>
         <p>
-          Each neural model may have a different expected Sample Rate, Ratatouille will resample the buffer to match that. Impulse Response Files will be resampled on the fly to match the session Sample Rate.
+          Each neural model may have a different expected Sample Rate, Ratatouille will resample the buffer to match that.
+          Impulse Response Files will be resampled on the fly to match the session Sample Rate.
         </p>
       </description>
     </release>
