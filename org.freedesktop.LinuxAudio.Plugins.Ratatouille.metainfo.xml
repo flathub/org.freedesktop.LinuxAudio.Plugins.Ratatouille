@@ -43,6 +43,9 @@
   <url type="bugtracker">https://github.com/brummer10/Ratatouille.lv2/issues</url>
   <url type="homepage">https://github.com/brummer10/Ratatouille.lv2</url>
   <releases>
+    <release version="0.9.6" date="2025-02-13">
+      <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.6</url>
+    </release>
     <release version="0.9.5" date="2024-12-30">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.5</url>
       <description>
