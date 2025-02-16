@@ -36,13 +36,28 @@
   <screenshots>
     <screenshot>
       <caption>Plugin GUI</caption>
-      <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.9.5/Ratatouille.png</image>
+      <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.9.7/Ratatouille.png</image>
     </screenshot>
   </screenshots>
   <url type="vcs-browser">https://github.com/brummer10/Ratatouille.lv2</url>
   <url type="bugtracker">https://github.com/brummer10/Ratatouille.lv2/issues</url>
   <url type="homepage">https://github.com/brummer10/Ratatouille.lv2</url>
   <releases>
+    <release version="0.9.7" date="2025-02-14">
+      <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.7</url>
+      <description>
+        <p>
+        </p>
+      </description>
+    </release>
+    <release version="0.9.6" date="2025-02-13">
+      <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.6</url>
+      <description>
+        <p>
+          This release implements a little ramp on Model file switching to avoid pops or clicks.
+        </p>
+      </description>
+    </release>
     <release version="0.9.5" date="2024-12-30">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.5</url>
       <description>
