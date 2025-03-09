@@ -5,7 +5,7 @@
   <summary>Neural Model loader and mixer LV2</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>BSD-3-Clause</project_license>
-  <developer>
+  <developer id="io.github.brummer10">
     <name>brummer10</name>
   </developer>
   <extends>org.freedesktop.LinuxAudio.BaseExtension</extends>
@@ -34,7 +34,7 @@
     </p>
   </description>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
       <caption>Plugin GUI</caption>
       <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.9.7/Ratatouille.png</image>
     </screenshot>
@@ -43,12 +43,11 @@
   <url type="bugtracker">https://github.com/brummer10/Ratatouille.lv2/issues</url>
   <url type="homepage">https://github.com/brummer10/Ratatouille.lv2</url>
   <releases>
+    <release version="0.9.8" date="2025-03-07">
+      <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.8</url>
+    </release>
     <release version="0.9.7" date="2025-02-14">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.7</url>
-      <description>
-        <p>
-        </p>
-      </description>
     </release>
     <release version="0.9.6" date="2025-02-13">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.6</url>
