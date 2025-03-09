@@ -29,8 +29,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/brummer10/Ratatouille.lv2
-        tag: v0.9.7
-        commit: 9f23e8059b6e290cf3e2c2feed2c6b05ef7b2ff7
+        tag: v0.9.8
+        commit: 35f8938949a1cf7864a85346f0bd59e0e78e484e
       - type: patch
         path: compiler-fixes.patch
       - type: file
