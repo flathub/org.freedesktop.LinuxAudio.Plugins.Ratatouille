@@ -36,21 +36,44 @@
   <screenshots>
     <screenshot type="default">
       <caption>Plugin GUI</caption>
-      <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.9.7/Ratatouille.png</image>
+      <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.9.10/Ratatouille.png</image>
     </screenshot>
   </screenshots>
   <url type="vcs-browser">https://github.com/brummer10/Ratatouille.lv2</url>
   <url type="bugtracker">https://github.com/brummer10/Ratatouille.lv2/issues</url>
   <url type="homepage">https://github.com/brummer10/Ratatouille.lv2</url>
   <releases>
+    <release version="0.9.10" date="2025-03-17">
+      <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.10</url>
+      <description>
+        <p>
+          Fix crashing issue present in 0.9.8 and 0.9.9.
+        </p>
+      </description>
+    </release>
     <release version="0.9.9" date="2025-03-14">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.9</url>
+      <description>
+        <p>
+          Fix crashing issue present in 0.9.8.
+        </p>
+      </description>
     </release>
     <release version="0.9.8" date="2025-03-07">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.8</url>
+      <description>
+        <p>
+          Introduces standalone (not applicable to LV2 version).
+        </p>
+      </description>
     </release>
     <release version="0.9.7" date="2025-02-14">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.7</url>
+      <description>
+        <p>
+          Fixes an issue with session startup in multi plugin hosts.
+        </p>
+      </description>
     </release>
     <release version="0.9.6" date="2025-02-13">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.6</url>
