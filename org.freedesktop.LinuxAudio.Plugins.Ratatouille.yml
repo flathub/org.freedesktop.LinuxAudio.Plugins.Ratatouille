@@ -16,9 +16,11 @@ modules:
   - name: ratatouille
     buildsystem: simple
     build-commands:
-      - make -j $FLATPAK_BUILDER_N_JOBS
-      - "mkdir -p ${FLATPAK_DEST}/lv2"
+      - make -j $FLATPAK_BUILDER_N_JOBS lv2 clap vst2
+      - "mkdir -p ${FLATPAK_DEST}/lv2 ${FLATPAK_DEST}/clap ${FLATPAK_DEST}/vst"
       - "cp -r bin/Ratatouille.lv2 ${FLATPAK_DEST}/lv2"
+      - "cp bin/Ratatouille.clap ${FLATPAK_DEST}/clap"
+      - "cp bin/Ratatouillevst.so ${FLATPAK_DEST}/vst"
     post-install:
       - "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/Ratatouille/LICENSE"
       - "install -Dm644 NeuralAmpModelerCore/LICENSE ${FLATPAK_DEST}/share/licenses/NeuralAmpModeler/LICENSE"
@@ -29,8 +31,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/brummer10/Ratatouille.lv2
-        tag: v0.9.10
-        commit: 0ac49f163de097f67a9ab129849779c52f229c68
+        tag: v0.9.11
+        commit: b24d3f0532bd2c201ec220b6a4037ab9ada1aa6e
       - type: patch
         path: compiler-fixes.patch
       - type: file

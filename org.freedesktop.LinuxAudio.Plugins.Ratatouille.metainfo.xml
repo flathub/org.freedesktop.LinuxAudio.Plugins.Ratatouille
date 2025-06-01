@@ -11,7 +11,7 @@
   <extends>org.freedesktop.LinuxAudio.BaseExtension</extends>
   <description>
     <p>
-      Ratatouille is an LV2 neural model loader and mixer for Linux.
+      Ratatouille is a neural model loader and mixer for Linux.
       It can load two models, which can be *.nam files with the Neural Amp Modeler module, or *.json or .aidax files with the RTNeural module.
     </p>
     <p>
@@ -29,20 +29,28 @@
       IR files can be normalised on load so that they didn't influence the loudness.
     </p>
     <p>
-      Ratatouille.lv2 supports resampling when needed to match the expected sample rate of the loaded models.
+      Ratatouille supports resampling when needed to match the expected sample rate of the loaded models.
       Both models and the IR Files may have different expectations regarding the sample rate.
     </p>
   </description>
   <screenshots>
     <screenshot type="default">
       <caption>Plugin GUI</caption>
-      <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.9.10/Ratatouille.png</image>
+      <image>https://raw.githubusercontent.com/brummer10/Ratatouille.lv2/v0.9.11/Ratatouille.png</image>
     </screenshot>
   </screenshots>
   <url type="vcs-browser">https://github.com/brummer10/Ratatouille.lv2</url>
   <url type="bugtracker">https://github.com/brummer10/Ratatouille.lv2/issues</url>
   <url type="homepage">https://github.com/brummer10/Ratatouille.lv2</url>
   <releases>
+    <release version="0.9.11" date="2025-05-31">
+      <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.11</url>
+      <description>
+        <p>
+          Add CLAP and VST2 versions of the plugin.
+        </p>
+      </description>
+    </release>
     <release version="0.9.10" date="2025-03-17">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.10</url>
       <description>
