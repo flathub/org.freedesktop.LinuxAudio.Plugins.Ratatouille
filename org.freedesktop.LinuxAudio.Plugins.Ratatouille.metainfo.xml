@@ -43,6 +43,17 @@
   <url type="bugtracker">https://github.com/brummer10/Ratatouille.lv2/issues</url>
   <url type="homepage">https://github.com/brummer10/Ratatouille.lv2</url>
   <releases>
+    <release version="0.9.12" date="2026-11-15">
+      <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.12</url>
+      <description>
+        <ul>
+          <li>Update NeuralAmpModelerCore</li>
+          <li>Support for NAM A2 models</li>
+          <li>Implement slim size controller</li>
+          <li>New GUI design</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.9.11" date="2025-05-31">
       <url>https://github.com/brummer10/Ratatouille.lv2/releases/tag/v0.9.11</url>
       <description>

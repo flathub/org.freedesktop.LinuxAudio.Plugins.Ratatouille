@@ -12,27 +12,31 @@ build-options:
 cleanup:
   - /lib
 modules:
-  - "shared-modules/linux-audio/lv2.json"
+  - shared-modules/linux-audio/lv2.json
   - name: ratatouille
     buildsystem: simple
     build-commands:
       - make -j $FLATPAK_BUILDER_N_JOBS lv2 clap vst2
-      - "mkdir -p ${FLATPAK_DEST}/lv2 ${FLATPAK_DEST}/clap ${FLATPAK_DEST}/vst"
-      - "cp -r bin/Ratatouille.lv2 ${FLATPAK_DEST}/lv2"
-      - "cp bin/Ratatouille.clap ${FLATPAK_DEST}/clap"
-      - "cp bin/Ratatouillevst.so ${FLATPAK_DEST}/vst"
+      - mkdir -p ${FLATPAK_DEST}/lv2 ${FLATPAK_DEST}/clap ${FLATPAK_DEST}/vst
+      - cp -r bin/Ratatouille.lv2 ${FLATPAK_DEST}/lv2
+      - cp bin/Ratatouille.clap ${FLATPAK_DEST}/clap
+      - cp bin/Ratatouillevst.so ${FLATPAK_DEST}/vst
+    license-files:
+      - LICENSE
+      - NeuralAmpModelerCore/LICENSE
+      - NeuralAmpModelerCore/Dependencies/AudioDSPTools/LICENSE
+      - NeuralAmpModelerCore/Dependencies/eigen/LICENSE
+      - libxputty/LICENSE
+      - RTNeural/LICENSE
+      - RTNeural/modules/xsimd/LICENSE
+      - FFTConvolver/COPYING.txt
     post-install:
-      - "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/Ratatouille/LICENSE"
-      - "install -Dm644 NeuralAmpModelerCore/LICENSE ${FLATPAK_DEST}/share/licenses/NeuralAmpModeler/LICENSE"
-      - "install -Dm644 FFTConvolver/COPYING.txt ${FLATPAK_DEST}/share/licenses/FFTConvolver/LICENSE"
-      - "install -Dm644 libxputty/LICENSE ${FLATPAK_DEST}/share/licenses/libxputty/LICENSE"
-      - "install -Dm644 RTNeural/LICENSE ${FLATPAK_DEST}/share/licenses/RTNeural/LICENSE"
-      - "install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.freedesktop.LinuxAudio.Plugins.Ratatouille.metainfo.xml"
+      - install -Dm644 org.freedesktop.LinuxAudio.Plugins.Ratatouille.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
     sources:
       - type: git
         url: https://github.com/brummer10/Ratatouille.lv2
-        tag: v0.9.11
-        commit: b24d3f0532bd2c201ec220b6a4037ab9ada1aa6e
+        tag: v0.9.12
+        commit: 44c905c77f1e4328b33efd915a24a39001125fe7
       - type: patch
         path: compiler-fixes.patch
       - type: file
