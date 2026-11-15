@@ -1,15 +1,3 @@
-diff -Naur ratatouille.orig/NeuralAmpModelerCore/CMakeLists.txt ratatouille/NeuralAmpModelerCore/CMakeLists.txt
---- ratatouille.orig/NeuralAmpModelerCore/CMakeLists.txt	2024-09-17 13:29:14.945040146 +0200
-+++ ratatouille/NeuralAmpModelerCore/CMakeLists.txt	2024-09-17 13:30:36.247797645 +0200
-@@ -12,8 +12,6 @@
- 
- if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
- 	include_directories(SYSTEM /usr/local/include)
--elseif (CMAKE_SYSTEM_NAME STREQUAL "Linux")
--	link_libraries(stdc++fs)
- elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
- 	add_compile_definitions(NOMINMAX WIN32_LEAN_AND_MEAN)
- else()
 diff -Naur ratatouille.orig/Ratatouille/makefile ratatouille/Ratatouille/makefile
 --- ratatouille.orig/Ratatouille/makefile	2024-09-17 13:29:13.503062182 +0200
 +++ ratatouille/Ratatouille/makefile	2024-09-17 13:31:34.441908287 +0200
